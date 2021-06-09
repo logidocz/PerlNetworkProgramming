@@ -4,9 +4,11 @@ use strict;
 my $sock0;
 my $sock;
 
+my $local_port = $ARGV[0];
+
 $sock0 = new IO::Socket::INET(Listen=>5,
 	LocalAddr=>'localhost',
-	LocalPort=>12345,
+	LocalPort=>$local_port,
 	Proto=>'tcp',
 	Reuse=>1);
 
